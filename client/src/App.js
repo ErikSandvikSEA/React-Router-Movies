@@ -18,13 +18,15 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
 
-      <Route path={`/movies/${id}`}>
-        <Movie />
-      </Route>
+      <Switch>   {/* STEP 3 - WRAP COMPONENTS IN ROUTES */}
+        <Route path={`/movies/${id}`}>
+          <Movie />
+        </Route>
 
-      <Route path='/'>
-        <MovieList />
-      </Route>
+        <Route path='/'>
+          <MovieList />
+        </Route>
+      </Switch>
 
     </div>
   );
