@@ -19,7 +19,7 @@ const App = () => {
       <SavedList list={savedList} />
 
       <Switch>   {/* STEP 3 - WRAP COMPONENTS IN ROUTES */}
-        <Route path={`/movies/${id}`}>
+        <Route path={`/movies/:id`}>
           <Movie />
         </Route>
 
