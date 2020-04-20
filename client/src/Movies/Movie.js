@@ -25,12 +25,9 @@ const Movie = (props) => {
   
   // Uncomment this only when you have moved on to the stretch goals
   const saveMovie = () => {
-    const addToSavedList = props.addToSavedList;
-    if(props.savedList.includes(movie)){
-    } else {
-    addToSavedList(movie)
+    props.addToSavedList(movie)
     }
-  }
+  
 
   if (!movie) {
     return <div>Loading movie information...</div>;
