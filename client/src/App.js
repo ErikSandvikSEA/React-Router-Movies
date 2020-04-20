@@ -8,9 +8,13 @@ import Movie from './Movies/Movie'
 
 const App = () => {
   const [savedList, setSavedList] = useState([]);
+  console.log(savedList)
 
   const addToSavedList = movie => {
+    if(savedList.includes(movie)){
+    } else {
     setSavedList([...savedList, movie]);
+    }
   };
 
   return (
@@ -19,7 +23,7 @@ const App = () => {
 
       <Switch>   {/* STEP 3 - WRAP COMPONENTS IN ROUTES */}
         <Route path={`/movies/:id`}>
-          <Movie />
+          <Movie savedList={savedList} addToSavedList={addToSavedList}/>
         </Route>
 
         <Route path='/'>
